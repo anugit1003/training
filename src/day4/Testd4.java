@@ -11,11 +11,12 @@ public class Testd4 {
 	public static void findIndexTest() {
 		Problem2d4 p = new Problem2d4();
 		int[] a1 = { 20, 30, 45, 70, 45, 90 };
-		int value = 700;
+		int value = 20;
+				
 		int index = p.findIndex(a1, value);
 
 		if (index >= 0) {
-			System.out.println(value + " is found in this array at index - " + index);
+			System.out.println(value + " is found in this array at index  " + index);
 		} else {
 			System.out.println(value + " value is not found in the given array");
 		}
