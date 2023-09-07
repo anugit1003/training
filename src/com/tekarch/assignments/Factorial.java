@@ -32,13 +32,14 @@ public class Factorial {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
+		
 
 		System.out.println("Enter a number :");
 
-		while (!scn.hasNextInt()) {
-			scn.next();
-			System.out.println("Enter integers only");
-		}
+		//if (scn.hasNextInt()) 
+			  //scn.next();
+			
+		
 
 		int fac = scn.nextInt();
 		scn.close();

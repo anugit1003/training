@@ -1,5 +1,6 @@
 package com.tekarch.assignments;
-//import java.util.Scanner;
+
+import java.util.Scanner;
 
 public class OccuranceOfNum {
 
@@ -7,7 +8,7 @@ public class OccuranceOfNum {
 
 		int currentArraValue;
 		int count = 0;
-		
+
 		for (int i = 0; i < arr.length; i++) {
 			currentArraValue = arr[i];
 			count = 1;
@@ -15,22 +16,21 @@ public class OccuranceOfNum {
 
 			// loop backwards to check
 			for (int k = i; k > 0; --k) {
-				
+
 				if (currentArraValue == arr[k - 1]) {
 					found = true;
 					break;
 				}
 
 			}
-			//skip
+			// skip
 			if (found) {
 				continue;
 			}
 
-			//Finding loop - improve this code
-			for (int j = i; j < arr.length-1; j++) {
+			for (int j = i; j < arr.length - 1; j++) {
 
-				if (currentArraValue == arr[j+1]) {
+				if (currentArraValue == arr[j + 1]) {
 					count++;
 				}
 
@@ -38,18 +38,26 @@ public class OccuranceOfNum {
 
 			System.out.println("The Array Value " + currentArraValue + " has been found " + count + " times ");
 		}
-		//return count;
 
 	}
 
 	public static void main(String[] args) {
 
-		int arr[] = { 20, 20, 20, 50, 20, 12, 60, 12 };
-		// int arr[] = { 12, 12, 12, 20, 20, 50, 60 };
+		Scanner scn = new Scanner(System.in);
+		System.out.println("enter the size of array");
+		int arrsize=0;
+		if(scn.hasNextInt()) {
+			 arrsize =scn.nextInt();
+		}
+		int arr[] = new int[arrsize];
+		System.out.println("Enter the values of the array");
+		for(int i=0;i<arrsize;i++) {
+			arr[i]=scn.nextInt();
+		}
+		scn.close();
 
 		OccuranceOfNum ocn = new OccuranceOfNum();
 		ocn.findCount(arr);
-		//System.out.println("the number of time each number is in the array:" + value);
 
 	}
 
