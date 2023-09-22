@@ -15,8 +15,7 @@ public class TestBubbleSort {
 				comparisons++; // Increment comparisons counter
 				totalOperations++; // Increment for the comparison operation
 				if (arr[j] > arr[j + 1]) {
-					// swap arr[j] and arr[j+1]
-					int temp = arr[j];
+					int temp = arr[j];  // --> one single temp variable used , hence space complexity is O(n)
 					arr[j] = arr[j + 1];
 					arr[j + 1] = temp;
 					swaps++; // Increment swaps counter
@@ -32,20 +31,20 @@ public class TestBubbleSort {
 
 	public static void main(String[] args) {
 
-		int arr1[] = { 10, 20, 30, 40, 50 }; // Already sorted - Best Case
-		int arr2[] = { 50, 40, 30, 20, 10 }; // Already sorted - Best Case
-		int arr3[] = { 901, 34, 603, 501, 401 }; // Randomly sorted
+		int sortedArray[] = { 10, 20, 30, 40, 50 }; // Already sorted - Best Case
+		int unSortedArray[] = { 50, 40, 30, 20, 10 }; // Not sorted - Worst Case
+		int randomArray[] = { 901, 34, 603, 501, 401 }; // Randomly sorted
 		
-		System.out.println("Original array:");
-        for (int i=0; i < arr1.length; i++)
-            System.out.print(arr1[i] + " ");
+		System.out.println("Original array: Best Case");
+        for (int i=0; i < sortedArray.length; i++)
+            System.out.print(sortedArray[i] + " ");
         
         System.out.println("");
-		bubbleSort(arr1);
+		bubbleSort(sortedArray);
 		
 		System.out.println("Sorted array:");
-        for (int i=0; i < arr1.length; i++)
-            System.out.print(arr1[i] + " ");
+        for (int i=0; i < sortedArray.length; i++)
+            System.out.print(sortedArray[i] + " ");
         
         System.out.println("");
 
@@ -54,45 +53,68 @@ public class TestBubbleSort {
 		System.out.println("Total operations: " + totalOperations);
 
 		// Analyzing Big O based on total operations
-		double ratio = (double) totalOperations / arr1.length;
-		System.out.println("The Ratio: " + ratio);
+		double ratio = (double) totalOperations / sortedArray.length;
+		//System.out.println("The Ratio: " + ratio);
 		if (ratio <= 1) {
 			System.out.println("The observed Big O notation is close to O(n)");
-			System.out.println("*****************************************");
+		
 		} else {
-			System.out.println("The observed Big O notation is close to O(n^2)");
-			System.out.println("*****************************************");
+			System.out.println("The observed Big O notation is close to O(n square)");
+		
 		}
 		
-		bubbleSort(arr2);
+		System.out.println("Original array: Worst Case");
+        for (int i=0; i < unSortedArray.length; i++)
+            System.out.print(unSortedArray[i] + " ");
+        
+        System.out.println("");
+		bubbleSort(unSortedArray);
+		
+		System.out.println("Sorted array:");
+        for (int i=0; i < unSortedArray.length; i++)
+            System.out.print(unSortedArray[i] + " ");
+        
+        System.out.println("");
 
 		System.out.println("Number of comparisons: " + comparisons);
 		System.out.println("Number of swaps: " + swaps);
 		System.out.println("Total operations: " + totalOperations);
 
 		// Analyzing Big O based on total operations
-		ratio = (double) totalOperations / arr2.length;
-		System.out.println("The Ratio: " + ratio);
+		ratio = (double) totalOperations / unSortedArray.length;
+		//System.out.println("The Ratio: " + ratio);
 		if (ratio <= 1) {
 			System.out.println("The observed Big O notation is close to O(n)");
+
 		} else {
-			System.out.println("The observed Big O notation is close to O(n^2)");
+			System.out.println("The observed Big O notation is close to O(n square)");
+			
 		}
 		
 		
-		bubbleSort(arr3);
-
+		System.out.println("Original Random array: Worst Case");
+        for (int i=0; i < randomArray.length; i++)
+            System.out.print(randomArray[i] + " ");
+        
+        System.out.println("");
+		bubbleSort(randomArray);
+		
+		System.out.println("Sorted array:");
+        for (int i=0; i < randomArray.length; i++)
+            System.out.print(randomArray[i] + " ");
+        
+        System.out.println("");
 		System.out.println("Number of comparisons: " + comparisons);
 		System.out.println("Number of swaps: " + swaps);
 		System.out.println("Total operations: " + totalOperations);
 
 		// Analyzing Big O based on total operations
-		ratio = (double) totalOperations / arr3.length;
-		System.out.println("The Ratio: " + ratio);
+		ratio = (double) totalOperations / randomArray.length;
+		//System.out.println("The Ratio: " + ratio);
 		if (ratio <= 1) {
 			System.out.println("The observed Big O notation is close to O(n)");
 		} else {
-			System.out.println("The observed Big O notation is close to O(n^2)");
+			System.out.println("The observed Big O notation is close to O(n square)");
 		}
 
 

@@ -4,13 +4,10 @@ import java.util.Scanner;
 
 public class ReverseString {
 	String originalStr;
-	
-
-	 
 
 	public String reversestring(String originalStr) {
-		
-		String reversedStr = "";  
+
+		String reversedStr = "";
 		for (int i = 0; i < originalStr.length(); i++) {
 			reversedStr = originalStr.charAt(i) + reversedStr;
 		}
@@ -18,7 +15,6 @@ public class ReverseString {
 		return reversedStr;
 
 	}
-	
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -29,14 +25,10 @@ public class ReverseString {
 
 		System.out.println("Original string: " + str1);
 
-		ReverseString strObject = new ReverseString();  
+		ReverseString strObject = new ReverseString();
 
 		String reversedS = strObject.reversestring(str1);
 		System.out.println("Reversed string: " + reversedS);
-		
-		
-		
-		
 
 	}
 

@@ -12,10 +12,11 @@ public class Factorial {
 		/* Factorial using a for loop */
 		for (i = 1; i <= f; i++) {
 			y = y * i;
+			System.out.println("Fatorial" +y);
 
 		}
 
-		System.out.println("Factorial of a number using For loop:" + y);
+		//System.out.println("Factorial of a number using For loop:" + y);
 
 		// Factorial of a number using while loop
 
@@ -32,14 +33,8 @@ public class Factorial {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
-		
 
 		System.out.println("Enter a number :");
-
-		//if (scn.hasNextInt()) 
-			  //scn.next();
-			
-		
 
 		int fac = scn.nextInt();
 		scn.close();

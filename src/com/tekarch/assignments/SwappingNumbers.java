@@ -1,4 +1,4 @@
-package day2;
+package com.tekarch.assignments;
 
 import java.util.Scanner;
 
