@@ -33,6 +33,7 @@ public class ListAdd {
 		ls.addFront(20);
 		ls.addFront(30);
 		ls.traverse();
+		
 
 	}
 
