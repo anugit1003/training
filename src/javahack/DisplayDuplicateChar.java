@@ -1,10 +1,10 @@
-package advanced.day4;
+package javahack;
 
 import java.util.Scanner;
 
-public class FrequencyOfChar {
+public class DisplayDuplicateChar {
 
-	private static final char zero = '0';
+	private static final char UNUSED_CHAR = '*';
 
 	public static void displayFrequency(String str) {
 		int[] array = new int[str.length()];
@@ -14,14 +14,16 @@ public class FrequencyOfChar {
 			for (int j = i + 1; j < str.length(); j++) {
 				if (cstring[i] == cstring[j]) {
 					array[i]++;
-					cstring[j] = zero;
+					cstring[j] = UNUSED_CHAR;
 				}
 			}
 		}
-		System.out.println("The characters and their frequencies:");
+		System.out.println("The duplicate characters in the given string:");
 		for (int i = 0; i < array.length; i++) {
-			if (cstring[i] != zero) {
-				System.out.println(cstring[i] + " " + array[i]);
+			if (cstring[i] != UNUSED_CHAR) {
+				if (array[i] > 1) {
+					System.out.println(cstring[i]);
+				}
 			}
 		}
 	}

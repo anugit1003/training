@@ -2,7 +2,7 @@ package com.tekarch.assignments;
 
 import java.util.Scanner;
 
-public class Reversewordinstring {
+public class ReverseWordInString {
 
 	public void reverseWord(String str) {
 		ReverseString rstr = new ReverseString();
@@ -26,7 +26,7 @@ public class Reversewordinstring {
 		String originalstring = scanner.nextLine();
 		scanner.close();
 
-		Reversewordinstring rs = new Reversewordinstring();
+		ReverseWordInString rs = new ReverseWordInString();
 		rs.reverseWord(originalstring);
 
 	}

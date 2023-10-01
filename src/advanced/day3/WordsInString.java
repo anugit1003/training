@@ -3,6 +3,7 @@ package advanced.day3;
 import java.util.Scanner;
 
 public class WordsInString {
+	
 	public int countWords(String str) {
 
 		String words[] = str.split("\\s+");
@@ -17,7 +18,7 @@ public class WordsInString {
 		System.out.println("Enter the string");
 		String str = scn.nextLine();
 		scn.close();
-		wst.countWords(str);
+		//wst.countWords(str);
 		System.out.println("Number of words in given string are:" + wst.countWords(str));
 
 	}

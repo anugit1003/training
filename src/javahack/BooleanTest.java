@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BooleanTest {
 	public static void closeScannerExit(Scanner scn) {
 		scn.close();
-		System.err.println("Enter proper boolean values 'true' or 'false'");
+		System.err.println("Invalid boolean values 'true' or 'false'");
 		System.exit(-1);
 	}
 	

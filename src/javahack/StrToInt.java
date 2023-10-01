@@ -1,4 +1,4 @@
-package advanced.day3;
+package javahack;
 
 import java.util.Scanner;
 
