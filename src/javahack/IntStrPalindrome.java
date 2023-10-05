@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class IntStrPalindrome {
 	
-	public static void palindrome(char arr[]) {
-		int n = arr.length;
+	public static void palindrome(String str) {		
 		boolean flag = true;
+		char arr[] = str.toCharArray();	
+		int n = arr.length;
 		for (int i = 0; i < n / 2; i++) {
 			if (arr[i] != arr[n - 1 - i]) {
 				flag = false;
@@ -24,9 +25,9 @@ public class IntStrPalindrome {
 		Scanner scn = new Scanner(System.in);
 		System.out.println("Enter a string");
 		String str = scn.nextLine();
-		char arr[] = str.toCharArray();			
+			
 		scn.close();	
-		palindrome(arr);
+		palindrome(str);
 	}
 
 }
